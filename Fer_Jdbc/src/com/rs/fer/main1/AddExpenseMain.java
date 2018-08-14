@@ -14,7 +14,9 @@ public class AddExpenseMain {
 
 		try {
 			connection = DBUtil.getConnection();
+			
 			String query = "INSERT INTO expense VALUES (?,?,?,?,?,?,?,?)";
+
 			preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setInt(1, 2);
 			preparedStatement.setString(2, "toothPaste");
